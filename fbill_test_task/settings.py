@@ -125,7 +125,7 @@ STATIC_URL = '/static/'
 
 AMOUNT_LIMITS_CONFIG = { # interval in seconds: sum limit
     10: 1000,
-    60: 1500,
+    60: 3000,
     3600: 20000,
 }
 
