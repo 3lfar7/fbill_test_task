@@ -1,0 +1,2 @@
+class AmountLimitsConfigError(Exception):
+    pass

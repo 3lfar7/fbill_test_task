@@ -1,0 +1,18 @@
+
+version: '3'
+services:
+  app:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/fbill_test_task:z
+    depends_on:
+      - redis
+    environment:
+      - REDIS_HOST=redis
+    ports:
+      - "8000:8000"
+  redis:
+    image: redis:4.0.10-alpine
+    ports:
+      - "8989:6379"
